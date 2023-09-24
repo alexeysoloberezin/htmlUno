@@ -1587,6 +1587,9 @@
       justify-content: center;
       @media (max-width: 500px) {
         display: inline-block;
+        max-width: 200px;
+        margin: 0 auto;
+
         div{
           display: inline;
         }

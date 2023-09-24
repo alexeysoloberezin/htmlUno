@@ -57,28 +57,10 @@ function scrollLink() {
 }
 
 function stickyBtnInit() {
-  // Флаг для отслеживания текущего состояния разрешения экрана
-  var isSmallScreen = false;
   var btnSticky = $('.btn-sticky');
 
-  // Функция для обработки изменений разрешения экрана
-  function handleResize() {
-    // Проверяем текущую ширину экрана
-    var screenWidth = $(window).width();
-
-    // Проверяем, нужно ли применять логику только для маленьких экранов (< 1200px)
-    if (screenWidth < 1200 && !isSmallScreen) {
-      isSmallScreen = true;
-      applyStickyLogic();
-    } else if (screenWidth >= 1200 && isSmallScreen) {
-      isSmallScreen = false;
-      removeStickyLogic();
-    }
-  }
-
-  // Функция для применения логики фиксации кнопки
+  applyStickyLogic()
   function applyStickyLogic() {
-
     $(window).scroll(function () {
       var windowBottom = $(window).scrollTop() + $(window).height();
       console.log(windowBottom, $('.start').height() + 100)
@@ -89,16 +71,6 @@ function stickyBtnInit() {
       }
     });
   }
-
-  // Функция для удаления логики фиксации кнопки
-  function removeStickyLogic() {
-    btnSticky.removeClass('active')
-    $(window).off('scroll');
-  }
-
-  // Вызываем обработку изменений разрешения экрана при загрузке и изменении размера окна
-  handleResize();
-  $(window).resize(handleResize);
 }
 
 function init() {

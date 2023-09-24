@@ -3160,6 +3160,16 @@ body, html {
     display: none;
 }
 
+@media (max-width: 500px) {
+    .btn-inst {
+        padding: 11px 22px;
+    }
+
+    .btn-inst-success br {
+        display: none;
+    }
+}
+
 .btn-inst.active .btn-inst-success {
     display: -ms-flexbox;
     display: flex;
@@ -3167,6 +3177,20 @@ body, html {
     flex-direction: column;
     -ms-flex-pack: center;
     justify-content: center;
+}
+
+@media (max-width: 500px) {
+    .btn-inst.active .btn-inst-success {
+        display: inline-block;
+    }
+
+    .btn-inst.active .btn-inst-success div {
+        display: inline;
+    }
+
+    .btn-inst.active .btn-inst-success * {
+        white-space: normal !important;
+    }
 }
 
 .btn-inst.active .btn-inst-main {
