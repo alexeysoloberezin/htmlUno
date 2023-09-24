@@ -155,7 +155,7 @@ a {
   flex-direction: column;
   grid-gap: 22px;
   @media (max-width: 1200px) {
-      grid-gap: 10px;
+      grid-gap: 15px;
   }
   &.dotMain {
     li:before {

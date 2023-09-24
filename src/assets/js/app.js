@@ -59,6 +59,7 @@ function scrollLink() {
 function stickyBtnInit() {
   // Флаг для отслеживания текущего состояния разрешения экрана
   var isSmallScreen = false;
+  var btnSticky = $('.btn-sticky');
 
   // Функция для обработки изменений разрешения экрана
   function handleResize() {
@@ -77,44 +78,21 @@ function stickyBtnInit() {
 
   // Функция для применения логики фиксации кнопки
   function applyStickyLogic() {
-    var btnSticky = $('.btn-sticky');
-    var content = $('.btn-sticky-box');
 
     $(window).scroll(function () {
       var windowBottom = $(window).scrollTop() + $(window).height();
-      var contentBottom = content.offset().top + content.height();
-      var btnPosition = contentBottom - btnSticky.height() + 30; // 20px from the bottom
-
-      if (windowBottom > btnPosition) {
-        btnSticky.css({
-          'position': 'fixed',
-          'bottom': '20px',
-          'height': '39px',
-          'width': 'calc(100vw - 30px)',
-          'max-width': content.width() + 'px',
-          'left': '15px'
-        });
+      console.log(windowBottom, $('.start').height() + 100)
+      if (windowBottom >  $('.start').height() + 200 ) {
+        btnSticky.addClass('active')
       } else {
-        btnSticky.css({
-          'position': 'absolute',
-          'bottom': '',
-          'height': '',
-          'width': '',
-          'left': '',
-        });
+        btnSticky.removeClass('active')
       }
     });
   }
 
   // Функция для удаления логики фиксации кнопки
   function removeStickyLogic() {
-    $('.btn-sticky').css({
-      'position': '',
-      'bottom': '',
-      'height': '',
-      'width': '',
-      'left': '',
-    });
+    btnSticky.removeClass('active')
     $(window).off('scroll');
   }
 
