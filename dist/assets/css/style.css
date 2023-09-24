@@ -146,13 +146,14 @@ table {
 @media (max-width: 1200px) {
     .btn, .btn-main, .btn-light {
         font-size: 13px;
-        padding: 12px 20px;
+        padding: 17px 34px;
     }
 }
 
 @media (max-width: 450px) {
     .btn, .btn-main, .btn-light {
         width: 100%;
+        padding: 17px 20px;
     }
 }
 
@@ -302,13 +303,13 @@ h5 {
     font-weight: 500;
 }
 
-.fz16 {
+.fz16, .tags__it {
     line-height: 1.3;
     font-size: 16px;
 }
 
 @media (max-width: 1200px) {
-    .fz16 {
+    .fz16, .tags__it {
         font-size: 13px;
     }
 }
@@ -369,7 +370,7 @@ a {
 
 @media (max-width: 1200px) {
     .list {
-        grid-gap: 10px;
+        grid-gap: 15px;
     }
 }
 
@@ -910,7 +911,7 @@ body, html {
     background: url("../images/img10.png") center/contain;
 }
 
-.bg2, .first, .bnr2 {
+.bg2, .tags, .first, .bnr2 {
     background: url("../images/img12.png") center/contain;
 }
 
@@ -1133,6 +1134,29 @@ body, html {
     }
 }
 
+.btn-sticky {
+    position: fixed;
+    bottom: 15px;
+    z-index: 202;
+    left: 50%;
+    width: calc(100vw - 30px);
+    -webkit-transform: translate(-50%, 70px);
+    transform: translate(-50%, 70px);
+    transition: 0.4s;
+    max-width: 400px;
+}
+
+.btn-sticky.active {
+    -webkit-transform: translate(-50%, 0px);
+    transform: translate(-50%, 0px);
+}
+
+@media (min-width: 1201px) {
+    .btn-sticky {
+        display: none;
+    }
+}
+
 @media (max-width: 1200px) {
     .start {
         padding-bottom: 40px;
@@ -1140,6 +1164,10 @@ body, html {
 
     .start .fz30 {
         max-width: 220px;
+    }
+
+    .start .fz20, .start .list li, .list .start li {
+        max-width: 280px;
     }
 }
 
@@ -1161,22 +1189,6 @@ body, html {
 @media (max-width: 1200px) {
     .start__wrp {
         max-width: 500px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .start .btn-sticky-box {
-        position: relative;
-        height: 39px;
-        width: 100%;
-    }
-
-    .start .btn-sticky-box .btn-sticky {
-        position: absolute;
-        bottom: 0;
-        z-index: 202;
-        left: 0;
-        width: 100%;
     }
 }
 
@@ -1205,6 +1217,16 @@ body, html {
         border-bottom: 1px solid #F5DB89;
         max-height: calc(60vh - 80px);
         min-height: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .start__l img {
+        display: -ms-flexbox;
+        display: flex;
+        margin: 0 auto;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 }
 
@@ -1334,6 +1356,16 @@ body, html {
 
 .course__it div:nth-child(2) {
     max-width: 360px;
+}
+
+@media (max-width: 500px) {
+    .course__it div:nth-child(2) {
+        max-width: 280px;
+    }
+
+    .course__it div:nth-child(2) br {
+        display: none;
+    }
 }
 
 .course__it-img {
@@ -1772,6 +1804,12 @@ body, html {
     }
 }
 
+@media (max-width: 500px) {
+    .another__it .fz24, .another__it .history__it-block-day, .another__it .learn__r {
+        max-width: 210px;
+    }
+}
+
 .week {
     padding: 100px 0 90px;
     text-align: center;
@@ -2151,6 +2189,10 @@ body, html {
     .know .know_swiper-box {
         max-width: calc(100vw - 80px);
     }
+
+    .know .slick-dots {
+        width: calc(100vw - 30px);
+    }
 }
 
 @media (max-width: 800px) {
@@ -2193,6 +2235,16 @@ body, html {
     overflow: hidden;
 }
 
+@media (max-width: 500px) {
+    .know .swiper-slide {
+        pointer-events: none;
+    }
+
+    .know .swiper-slide.slick-active {
+        pointer-events: initial;
+    }
+}
+
 .know .btn-inst {
     position: absolute;
     bottom: 0;
@@ -2216,12 +2268,6 @@ body, html {
     }
 }
 
-@media (max-width: 600px) {
-    .first__date {
-        margin: 0 auto;
-    }
-}
-
 .form input {
     height: 50px;
     width: 100%;
@@ -2236,6 +2282,7 @@ body, html {
 @media (max-width: 1000px) {
     .form input {
         height: 35px;
+        margin-bottom: 8px;
     }
 }
 
@@ -2261,6 +2308,12 @@ body, html {
 
 .form label {
     margin-bottom: 10px;
+}
+
+@media (max-width: 1000px) {
+    .form label {
+        margin-bottom: 7px;
+    }
 }
 
 .form button {
@@ -2293,14 +2346,13 @@ body, html {
     align-items: center;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
-    min-height: 840px;
 }
 
 @media (max-width: 1200px) {
     .first__wrp {
         grid-template-columns: 1fr;
         grid-gap: 0;
-        padding-top: 35px;
+        padding-top: 40px;
     }
 }
 
@@ -2308,6 +2360,7 @@ body, html {
     .first__wrp {
         padding-left: 100px;
         padding-top: 50px;
+        min-height: 840px;
     }
 }
 
@@ -2332,7 +2385,7 @@ body, html {
 
 @media (max-width: 600px) {
     .first__title {
-        margin-bottom: 15px;
+        margin-bottom: 12px;
     }
 }
 
@@ -2340,9 +2393,21 @@ body, html {
     margin-bottom: -5px;
 }
 
+@media (max-width: 1200px) {
+    .first__date {
+        padding: 2px 40px 0 96px;
+    }
+}
+
 .first .fz24, .first .history__it-block-day, .first .learn__r {
     font-weight: 300;
     max-width: 466px;
+}
+
+@media (max-width: 1200px) {
+    .first .fz24, .first .history__it-block-day, .first .learn__r {
+        max-width: 280px;
+    }
 }
 
 .first .form, .first form {
@@ -2356,6 +2421,7 @@ body, html {
 @media (max-width: 1200px) {
     .first .form, .first form {
         margin-top: 10px;
+        max-width: calc(100vw - 30px);
     }
 }
 
@@ -2382,10 +2448,19 @@ body, html {
 @media (max-width: 1200px) {
     .first__r {
         height: auto;
-        margin-bottom: -35px;
         margin-right: auto;
         margin-left: auto;
         width: 325px;
+        margin-top: 42px;
+        -webkit-transform: translateX(-26px);
+        transform: translateX(-26px);
+    }
+
+    .first__r img {
+        height: 324px;
+        width: 324px;
+        -o-object-fit: contain;
+        object-fit: contain;
     }
 }
 
@@ -2728,7 +2803,7 @@ body, html {
     }
 }
 
-.history__it-days-box .fz16 {
+.history__it-days-box .fz16, .history__it-days-box .tags__it {
     font-weight: 300;
 }
 
@@ -2909,10 +2984,15 @@ body, html {
     .for__it {
         -ms-flex-align: start;
         align-items: start;
+        max-width: 280px;
     }
 
     .for__it * {
         text-align: left;
+    }
+
+    .for__it br {
+        display: none;
     }
 }
 
@@ -3109,7 +3189,7 @@ body, html {
 
 @media (max-width: 900px) {
     .letgo {
-        padding-top: 0;
+        padding-top: 30px;
         padding-bottom: 40px;
     }
 
@@ -3133,6 +3213,18 @@ body, html {
     .letgo__wrp div:nth-child(3) {
         max-width: 400px;
         width: 100%;
+    }
+
+    .letgo__wrp div:nth-child(4), .letgo__wrp div:nth-child(4) * {
+        font-size: 16px;
+    }
+
+    .letgo__wrp div:nth-child(4) p {
+        margin-bottom: 15px;
+    }
+
+    .letgo__wrp div:nth-child(4) p:last-child {
+        margin-bottom: 0;
     }
 }
 
@@ -3224,13 +3316,19 @@ body, html {
 
 @media (max-width: 1200px) {
     .letgo__it h4 {
-        margin-bottom: 18px;
-        margin-top: 18px;
+        margin-bottom: 20px;
+        margin-top: 25px;
     }
 }
 
 .letgo__it h4:nth-child(1) {
     margin-top: 0;
+}
+
+@media (max-width: 1000px) {
+    .letgo__it li br {
+        display: none;
+    }
 }
 
 .letgo__btns {
@@ -3306,7 +3404,9 @@ body, html {
         flex-direction: column;
         grid-gap: 15px;
     }
+}
 
+@media (max-width: 1200px) and (min-width: 500px) {
     .stop__btns .btn-main {
         min-width: 300px;
     }
@@ -3358,6 +3458,61 @@ body, html {
     .footer {
         font-size: 16px;
         letter-spacing: 40.56px;
+    }
+}
+
+.tags {
+    padding: 100px 0;
+}
+
+@media (max-width: 1200px) {
+    .tags {
+        padding: 40px 0;
+    }
+}
+
+.tags__list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+    grid-gap: 20px;
+    margin-top: 100px;
+}
+
+@media (max-width: 1200px) {
+    .tags__list {
+        margin-top: 40px;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        grid-gap: 15px;
+    }
+}
+
+.tags-text {
+    max-width: 985px;
+    margin: 0 auto;
+    color: #D8D8D8;
+    font-weight: 300;
+}
+
+.tags__it {
+    padding: 12px 35px;
+    border: 1px solid #F0DDA2;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+
+.tags__it:hover {
+    background: #F0DDA2;
+    color: #2E1A01;
+}
+
+@media (max-width: 1200px) {
+    .tags__it {
+        padding: 10px 25px;
     }
 }
 

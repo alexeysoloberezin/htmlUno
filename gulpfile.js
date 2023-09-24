@@ -174,7 +174,7 @@ function jsWatch(cb) {
       }
     }))
     .pipe(webpackStream({
-      mode: "development",
+      mode: "production",
       output: {
         filename: 'app.js',
       }
