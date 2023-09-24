@@ -1,0 +1,40 @@
+.breadcrumbs {
+  margin: 20px 0;
+}
+
+.breadcrumbs ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.breadcrumbs li {
+  margin-right: 10px;
+  &:after{
+    content: '/';
+    margin-left: 10px;
+  }
+  &:last-child{
+    pointer-events: none;
+    opacity: 0.5;
+    &:after{
+      content: none;
+    }
+  }
+}
+
+.breadcrumbs li:last-child {
+  font-weight: bold;
+}
+
+.breadcrumbs li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+
+}
+
+.breadcrumbs li a:hover {
+  text-decoration: underline;
+}

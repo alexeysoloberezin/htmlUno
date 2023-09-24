@@ -1,0 +1,73 @@
+@import "vars";
+
+.container{
+  max-width: 1350px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+// Миксин для создания сетки
+@mixin responsive-grid-template-columns($desktop,  $medium, $small) {
+  display: grid;
+  @media (min-width: $media-desktopMin) {
+    grid-template-columns: $desktop;
+  }
+
+  @media (max-width: $media-desktop) and (min-width: $media-smallMin) {
+    grid-template-columns: $medium;
+  }
+
+  @media (max-width: $media-small) {
+    grid-template-columns: $small;
+  }
+}
+
+@mixin responsive-gap($desktop: $desktop-gap, $medium: $medium-gap, $small: $small-gap, $desktopColumn: 0, $mediumColumn: 0, $smallColumn: 0, $desktopRow: 0, $mediumRow: 0, $smallRow: 0) {
+  @media (min-width: $media-desktopMin) {
+    grid-gap: $desktop;
+    @if $desktopColumn != 0 {
+      grid-column-gap: $desktopColumn;
+    }
+    @if $desktopRow != 0 {
+      grid-row-gap: $desktopRow;
+    }
+  }
+
+  @media (max-width: $media-desktop) and (min-width: $media-smallMin) {
+    grid-gap: $medium;
+    @if $mediumColumn != 0 {
+      grid-column-gap: $mediumColumn;
+    }
+    @if $mediumRow != 0{
+      grid-row-gap: $mediumRow;
+    }
+  }
+
+  @media (max-width: $media-small) {
+    grid-gap: $small;
+    @if $smallColumn != 0{
+      grid-column-gap: $smallColumn;
+    }
+    @if $smallRow != 0{
+      grid-row-gap: $smallRow;
+    }
+  }
+}
+
+
+// Использование сетки
+.container {
+}
+
+.about__wrp {
+  @include responsive-grid-template-columns(1fr 1fr 1fr, 1fr 1fr, 1fr);
+  @include responsive-gap
+}
+
+.about__it {
+  background: #333;
+  height: 300px;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+}
+

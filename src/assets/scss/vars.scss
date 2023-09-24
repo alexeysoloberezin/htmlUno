@@ -1,0 +1,31 @@
+// Fonts
+$font1: 'Montserrat', sans-serif;
+$font2: 'Tenor Sans', sans-serif;
+
+// Colors
+$primary-color: #F5DB89;
+$white-color: #fff;
+$dark-color: #2E1A01;
+$gray-color: #D8D8D8;
+$menu-bg: #231B10;
+$light-color: #D3CCC3;
+
+// Media
+$media-desktop: 1200px;
+$media-small: 768px;
+$media-desktopMin: $media-desktop + 1px;
+$media-smallMin: $media-small + 1px;
+
+$desktop-gap: 30px;
+$medium-gap: 20px;
+$small-gap: 10px;
+
+// Размеры
+$btn-padding: 10px 20px;
+$btn-border-radius: 4px;
+$btn-font-size: 14px;
+
+// Другие переменные
+$btn-cursor: pointer;
+$border-radius: 14px;
+$shadow: 0 0 5px rgba(0, 0, 0, 0.54);

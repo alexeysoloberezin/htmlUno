@@ -1,0 +1,176 @@
+---
+layout: default
+title: Components
+---
+
+<style>
+  .wrp{
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+  .box{
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 5px rgba(51, 51, 51, 0.3);
+  }
+  .box-full{
+    grid-column: 1 / span 2;
+  }
+  .box .box-title{
+    font-size: 25px;
+    line-height: 1.2;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.15);
+    margin-bottom: 15px;
+  }
+</style>
+
+<div class="wrp">
+  <div class="box">
+    <h2 class="box-title">Button</h2>
+    <div class="btn">Lorem</div>
+    <div class="btn btn-fill">Lorem</div>
+    <div class="btn btn-outlined">Lorem</div>
+  </div>
+  <div class="box">
+    <h2 class="box-title">Inputs</h2>
+
+    <input type="text" class="input">
+    <hr>
+    <input type="tel" class="input phone">
+    <hr>
+    <input type="email" class="input">
+    <hr>
+    <select id="mySelect">
+      <option value>Select...</option>
+      <option value="foo">Foo</option>
+      <option value="buz">Buz</option>
+    </select>
+    <hr>
+
+    <div class="dropdown">
+      <button class="dropdown-toggle">Наведите для открытия</button>
+      <div class="dropdown-menu">
+        <a href="#">Пункт меню 1</a>
+        <a href="#">Пункт меню 2</a>
+        <a href="#">Пункт меню 3</a>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="checkbox">
+      <input type="checkbox" id="checkbox1">
+      <label for="checkbox1">Checkbox Label</label>
+    </div>
+  </div>
+  <div class="box">
+    <h2 class="box-title">Popup</h2>
+
+    <button class="popup-toggle" data-popup="popup1">Open Popup 1</button>
+    <button class="popup-toggle" data-popup="popup2">Open Popup 2</button>
+
+    <div class="popup-overlay" id="popup1">
+      <div class="popup-content">Popup 1 Content</div>
+    </div>
+    <div class="popup-overlay" id="popup2">
+      <div class="popup-content">Popup 2 Content</div>
+    </div>
+
+  </div>
+  <div class="box">
+    <h2 class="box-title">Accordion</h2>
+
+    <div class="accordion-item">
+      <div class="accordion-header">Заголовок 1</div>
+      <div class="accordion-content">
+        <p>Скрытое содержимое 1</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">Заголовок 2</div>
+      <div class="accordion-content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, praesentium!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, praesentium!
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">Заголовок 3</div>
+      <div class="accordion-content">
+        <p>Скрытое содержимое 3</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="box">
+    <h2 class="box-title">Burger</h2>
+    {{> burger }}
+  </div>
+  <div class="box">
+    <div class="box-title">Avatars</div>
+
+    <div class="avatar"><img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png" alt=""></div>
+    <hr>
+    <div class="avatars">
+      <div class="avatar"><img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png" alt=""></div>
+      <div class="avatar"><img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png" alt=""></div>
+      <div class="avatar"><img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png" alt=""></div>
+      <div class="avatar"><img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png" alt=""></div>
+    </div>
+
+  </div>
+  <div class="box box-full">
+    <h2 class="box-title">Typography</h2>
+    <h1>Заголовок 1</h1>
+    <h2>Заголовок 2</h2>
+    <h3>Заголовок 3</h3>
+    <h4>Заголовок 4</h4>
+    <h5>Заголовок 5</h5>
+
+    <p>Текст 1 просто p</p>
+    <p class="pv2">Текст 2 с классом .pv2</p>
+    <p class="pv3">Текст 3 с классом .pv3</p>
+    <p class="pv4">Текст 4 с классом .pv4</p>
+    <p class="pv5">Текст 5 с классом .pv5</p>
+  </div>
+
+  <div class="box">
+    <h2 class="box-title">Breadcrumbs</h2>
+
+    <nav class="breadcrumbs">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="#">About me</a></li>
+      </ul>
+    </nav>
+  </div>
+
+</div>
+
+  <div class="box-title">Swiper</div>
+
+  <!-- Swiper -->
+  <div class="swiper-container mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>

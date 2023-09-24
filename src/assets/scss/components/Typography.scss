@@ -1,0 +1,200 @@
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-color;
+  font-family: $font2;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 62px;
+  @media (max-width: 1200px) {
+    font-size: 26px;
+  }
+}
+
+h2 {
+  font-size: 52px;
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
+}
+
+h3 {
+  font-size: 40px;
+  @media (max-width: 1200px) {
+    font-size: 16px;
+  }
+}
+
+h4 {
+  font-size: 30px;
+  @media (max-width: 1200px) {
+    font-size: 16px;
+  }
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.fz13 {
+  font-size: 13px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fz20 {
+  font-size: 20px;
+  line-height: 1.2;
+  @media (max-width: 1200px) {
+    font-size: 13px;
+  }
+}
+
+.fz24 {
+  font-size: 24px;
+  @media (max-width: 1200px) {
+    font-size: 13px;
+  }
+}
+
+.fz30 {
+  font-size: 30px;
+  @media (max-width: 1200px) {
+    font-size: 16px;
+  }
+}
+
+.fz40 {
+  font-size: 40px;
+  @media (max-width: 1200px) {
+    font-size: 16px;
+  }
+}
+
+.fw600 {
+  font-weight: 600;
+}
+
+.fw500 {
+  font-weight: 500;
+}
+
+.fz16 {
+  line-height: 1.3;
+  font-size: 16px;
+  @media (max-width: 1200px) {
+    font-size: 13px;
+  }
+}
+
+.ttu {
+  text-transform: uppercase;
+}
+
+.text-shadow {
+  text-shadow: 0 0 20px #EED99A;
+}
+
+.text-white {
+  &, * {
+    color: $white-color !important;
+  }
+}
+
+.text-main {
+  color: $primary-color !important;
+
+  * {
+    color: $primary-color !important;
+  }
+}
+
+.text-black {
+  &, * {
+    color: $white-color !important;
+  }
+}
+
+.text-dark {
+  &, * {
+    color: $dark-color !important;
+  }
+}
+
+.text-gray {
+  &, * {
+    color: $gray-color !important;
+  }
+}
+
+.ff2 {
+  font-family: $font2;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.fz14 {
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 22px;
+  @media (max-width: 1200px) {
+      grid-gap: 10px;
+  }
+  &.dotMain {
+    li:before {
+      background: $primary-color;
+    }
+  }
+
+  li {
+    display: flex;
+    @extend .fz20;
+
+    &:before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      flex-shrink: 0;
+      display: block;
+      background: $dark-color;
+      border-radius: 50%;
+      margin: 7px 20px 0 0;
+      @media (max-width: 1200px) {
+        width: 4px;
+        margin-right: 10px;
+        height: 4px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+
+  .mobFz16 {
+    font-size: 16px;
+  }
+  .mobFz13 {
+    font-size: 13px;
+  }
+  .mobFz20 {
+    font-size: 20px;
+  }
+}

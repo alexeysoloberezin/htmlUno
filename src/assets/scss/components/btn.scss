@@ -1,0 +1,82 @@
+// Общие стили для кнопок
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 20px 50px;
+  color: $dark-color;
+  text-align: center;
+  font-family: $font2;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+  line-height: normal;
+  text-transform: uppercase;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 0 25px 0px rgba(238, 217, 154, 0.70);
+  transition: background-color .3s, color .3s, border .3s;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    border-radius: 4px;
+    height: 100%;
+    display: block;
+    transition: .35s;
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 13px;
+    padding: 12px 20px;
+  }
+  @media (max-width: 450px) {
+    width: 100%;
+  }
+}
+
+.btn-light {
+  @extend .btn;
+  background: linear-gradient(90deg, #D9BA5C 0%, #F0DDA2 9.38%, #F0DDA2 36.46%, #D9BA5C 51.56%, #F0DDA2 67.19%, #F0DDA2 89.58%, #D9BA5C 100%);
+
+  &:after {
+    background: #F0DDA2;
+  }
+
+  &:hover {
+    box-shadow: 0 0 20px 0 rgba(238, 217, 154, 0.70);
+
+    &:after {
+      opacity: 0;
+    }
+  }
+}
+
+.btn-main {
+  @extend .btn;
+  background: linear-gradient(90deg, #CFA41A 0%, #F5D56E 12.5%, #F5D56E 29.17%, #CFA41A 48.44%, #F5D56E 67.19%, #F5D56E 89.06%, #CFA41A 100%);
+
+  &:after {
+    background: #F5D56E;
+
+  }
+
+  &:hover {
+    box-shadow: 0 0 20px 0 rgba(238, 217, 154, 0.70);
+
+    &:after {
+      opacity: 0;
+    }
+  }
+}
+
