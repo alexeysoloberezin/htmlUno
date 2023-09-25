@@ -28,7 +28,7 @@ function copyToClipboard(text) {
     $(this).addClass('active')
     setTimeout(() => {
       $(this).removeClass('active')
-    }, 2000)
+    }, 3400)
   } catch (err) {
     console.error('Не удалось скопировать текст: ', err);
   } finally {

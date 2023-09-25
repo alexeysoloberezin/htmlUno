@@ -140,7 +140,7 @@ table {
 
 .btn span, .btn-main span, .btn-light span {
     position: relative;
-    z-index: 1;
+    z-index: 4;
 }
 
 @media (max-width: 1200px) {
@@ -3182,6 +3182,8 @@ body, html {
 @media (max-width: 500px) {
     .btn-inst.active .btn-inst-success {
         display: inline-block;
+        max-width: 200px;
+        margin: 0 auto;
     }
 
     .btn-inst.active .btn-inst-success div {
