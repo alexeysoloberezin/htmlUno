@@ -21,6 +21,23 @@ export default function swiperInit(){
   //   },
   // });
 
+  $('.learn_slick').slick({
+    slidesToShow: 2,
+    infinite: true,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: true,
+    prevArrow: $('.learn_swiper-prev-arrow'), // Use your custom previous arrow element
+    nextArrow: $('.learn_swiper-next-arrow'),
+    responsive: [
+      {
+        breakpoint: 800, // Медиа-запрос для ширины экрана от 500px до 800px
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
   $('.know_swiper').slick({
     infinite: true,
     slidesToShow: 4,

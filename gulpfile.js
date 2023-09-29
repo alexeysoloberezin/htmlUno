@@ -110,7 +110,6 @@ function css(cb) {
       html: ['dist/**/*.html'] // Замените путь на соответствующий вашему проекту
     }))
     .pipe(dest(path.build.css))
-    .pipe(browserSync.reload({stream: true}));
 
   cb();
 }

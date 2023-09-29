@@ -590,6 +590,10 @@
     padding: 42px 0;
   }
 
+  .slick-arrow.slick-hidden {
+    display: block !important;
+  }
+
   &__head {
     position: relative;
 
@@ -614,7 +618,7 @@
     display: flex;
     align-items: flex-end;
     grid-gap: 35px;
-    padding-top: 122px;
+    padding-top: 132px;
     margin-bottom: 25px;
 
     svg {
@@ -652,7 +656,6 @@
     min-width: 310px;
     display: flex;
     flex-direction: column;
-    padding: 0 0 7px 6px;
     justify-content: flex-end;
     grid-gap: 10px;
     white-space: nowrap;
@@ -660,6 +663,8 @@
     div:nth-child(1) {
       text-transform: uppercase;
     }
+
+
 
     @media (max-width: 1200px) {
       min-width: 200px;
@@ -704,6 +709,67 @@
       margin-left: -35px;
       br {
         display: none;
+      }
+    }
+  }
+
+  &_slick {
+    &-title {
+      margin-top: 80px;
+      margin-bottom: 40px;
+      @media (max-width: 1000px) {
+        margin-bottom: 20px;
+        margin-top: 30px;
+      }
+    }
+
+    &-box {
+      position: relative;
+      max-width: calc(536px + 536px + 20px);
+      margin: 0px auto 0;
+
+      @media (max-width: 1000px) {
+        .slick-arrow {
+          display: none !important;
+        }
+        width: calc(100vw - 10px);
+      }
+    }
+
+    &-end {
+      margin: 30px auto;
+      @media (max-width: 1000px) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .swiper-slide {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 526px;
+      overflow: hidden;
+      @media (max-width: 800px) {
+        height: calc(100vw - 30px);
+
+      }
+
+      img:nth-child(2) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        filter: blur(70px);
+        height: 100%;
+      }
+
+      img:nth-child(1) {
+        object-fit: contain;
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 3;
       }
     }
   }
@@ -754,7 +820,6 @@
       img {
         width: 100%;
         height: 100%;
-        border-radius: 0 0 20px 20px;
         object-fit: cover;
       }
 
@@ -771,6 +836,7 @@
 .swiper-container {
   overflow-y: hidden;
 }
+
 
 .know {
   padding: 98px 0;
